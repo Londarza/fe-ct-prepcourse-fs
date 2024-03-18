@@ -6,6 +6,22 @@ function combine(str1, str2, str3) {
    // combine("abc", "", "123") == "a1b2c3"
    // combine("abc", "12345", "") == "a1b2c345"
    // combine("abc", "12345", "67") == "a16b27c345"
+   let combinados = ''
+   let caracteresMaximos = Math.max(str1.length,str2.length,str3.length)
+   for (let i = 0; i < caracteresMaximos; i++) {
+      if (str1[i]) {
+         combinados += str1[i]
+      }
+      if (str2[i]) {
+         combinados += str2[i]
+      }
+      if (str3[i]) {
+         combinados += str3[i]
+      }
+      
+   }
+   return combinados
 }
+
 
 module.exports = combine;
